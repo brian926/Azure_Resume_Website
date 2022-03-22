@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\frontend"
   ],
-  "SelectedNode": "\\stylesError.css",
+  "SelectedNode": "\\frontend\\index.html",
   "PreviewInSolutionExplorer": false
 }
