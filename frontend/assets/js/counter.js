@@ -3,12 +3,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 // Get a count of visitors to the site
-const localApi = 'http://localhost:7071/api/GetResumeCounter';
-//const functionApi = 'https://getresumecounterfunctionapp.azurewebsites.net/api/GetResumeCounter?code=jp4rx3wuLEzaXvSFeBKaq08RGiVCwRtpAA1Cdxdc15c9ZGjM79tWjg=='; 
+//const localApi = 'http://localhost:7071/api/GetResumeCounter';
+const functionApi = 'https://resumevisitorcounter.azurewebsites.net/api/GetResumeCounter?code=MZhhMvfcBL3AGuB2EHUBXd5hgQmxVF3LxCcgzwHIkiyEl590UlAM1g=='; 
 					
 const getVisitCount = () => {
 	let count = 30;
-	fetch(localApi).then(response => {
+	fetch(functionApi).then(response => {
 			return response.json()
 		}).then(response => {
 			console.log("Website called function API.");
