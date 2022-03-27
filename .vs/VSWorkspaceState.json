@@ -1,10 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\backend",
+    "\\backend\\api",
     "\\frontend",
     "\\frontend\\assets",
     "\\frontend\\assets\\js"
   ],
-  "SelectedNode": "\\backend",
+  "SelectedNode": "\\backend\\api\\host.json",
   "PreviewInSolutionExplorer": false
 }

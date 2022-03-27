@@ -23,9 +23,16 @@ namespace Company.Function
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
+            // Add 1 to the count in the database
             updatedCounter = counter;
             updatedCounter.Count += 1;
 
+            // Get the DateTime now, convert it to EST, and update the DB with it
+            TimeZoneInfo est = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
+            DateTime targetTime = TimeZoneInfo.ConvertTime(DateTime.Now, est);
+            updatedCounter.Time = targetTime.ToString();
+
+            // Return count to the web page
             var jsonToReturn = JsonConvert.SerializeObject(counter);
 
             return new HttpResponseMessage(System.Net.HttpStatusCode.OK){
