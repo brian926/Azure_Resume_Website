@@ -1,8 +1,8 @@
-name: Deploy backend to Azure Function
+name: 'Deploy backend to Azure Function'
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
     paths:
     - 'backend/**'
 
@@ -13,7 +13,7 @@ env:
 
 jobs:
   build-and-deploy:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - name: 'Checkout GitHub Action'
       uses: actions/checkout@v2
