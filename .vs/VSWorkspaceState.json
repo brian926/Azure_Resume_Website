@@ -3,8 +3,10 @@
     "",
     "\\backend",
     "\\backend\\api",
+    "\\frontend",
     "\\frontend\\assets",
-    "\\frontend\\assets\\js"
+    "\\frontend\\assets\\css"
   ],
+  "SelectedNode": "\\frontend\\assets\\css\\main.css",
   "PreviewInSolutionExplorer": false
 }

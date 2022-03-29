@@ -3,7 +3,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 // Get a count of visitors to the site
-//const localApi = 'http://localhost:7071/api/GetResumeCounter';
 const functionApi = 'https://resumevisitorcounter.azurewebsites.net/api/GetResumeCounter?code=MZhhMvfcBL3AGuB2EHUBXd5hgQmxVF3LxCcgzwHIkiyEl590UlAM1g=='; 
 					
 const getVisitCount = () => {
