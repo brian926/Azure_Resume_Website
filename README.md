@@ -2,7 +2,9 @@
 
  ## Summary
  Personal resume website being hosted completely on Azure. This is part of the Azure Resume Challenge, where the goal is to create a 100% Azure-hosted version of your resume.
+ 
  View it live [here](https://www.brianantunes.com)
+ 
  A summary of it is a static site deployed to Blob Storage. That static site also fetches a visitor count from a Azure Function API to show a visitor count.
  That Azure Function API retrieves data from a Azure Cosmos DB and passes the count of visitors in the database.
  Lastly, Github Actions is used to create a CI/CD to deploy all changes to the front-end and/or back-end in Azure automatically.
