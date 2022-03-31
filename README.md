@@ -7,7 +7,7 @@
  
  A summary of it is a static site deployed to Blob Storage. That static site also fetches a visitor count from a Azure Function API to show a visitor count.
  That Azure Function API retrieves data from a Azure Cosmos DB and passes the count of visitors in the database.
- Lastly, Github Actions is used to create a CI/CD to deploy all changes to the front-end and/or back-end in Azure automatically.
+ Lastly, Github Actions is used to create a CI/CD pipeline to deploy all changes to the front-end and/or back-end in Azure automatically.
 
  ## Resources
  The front-end is a static site being hosted with Azure Blob Storage. Here are some of the resources I used.
