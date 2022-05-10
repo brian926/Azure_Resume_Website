@@ -2,10 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\backend",
-    "\\backend\\api",
     "\\frontend",
     "\\frontend\\assets",
+    "\\frontend\\assets\\css",
+    "\\frontend\\assets\\js",
     "\\frontend\\images"
   ],
+  "SelectedNode": "\\frontend\\assets\\js\\weather.js",
   "PreviewInSolutionExplorer": false
 }
