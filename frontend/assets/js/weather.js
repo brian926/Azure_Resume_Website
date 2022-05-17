@@ -1,7 +1,7 @@
 ﻿/*SEARCH BY USING A CITY NAME (e.g. athens) OR A COMMA-SEPARATED CITY NAME ALONG WITH THE COUNTRY CODE (e.g. athens,gr)*/
 const list = document.querySelector(".ajax-section .cities");
-const apiKey = "";
-const api = ""
+const apiKey = "d6b7a3447529c297169c609d74cda367";
+const api = "64730ae3269452"
 
 document.addEventListener('DOMContentLoaded', e => {
     e.preventDefault();
@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', e => {
             const li = document.createElement("li");
             li.classList.add("city");
             const markup = `
-        <h2 class="city-name" data-name="${name},${sys.country}">
+        <h4 class="city-name" data-name="${name},${sys.country}">
           <span>${name}</span>
           <sup>${sys.country}</sup>
-        </h2>
+        </h4>
         <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup></div>
         <figure>
           <img class="city-icon" src="${icon}" alt="${weather[0]["description"]

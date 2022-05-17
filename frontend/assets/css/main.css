@@ -3316,7 +3316,7 @@ input, select, textarea {
 	}
 
 /* Weather Section */
-/*–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*–––––––––––––––––––––––––––––––––––––––––––––––––– 
 .weather-container {
 	width: 50%;
 	max-width: 1200px;
@@ -3421,4 +3421,99 @@ input, select, textarea {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+	*/
 
+.weather-container {
+	width: 100%;
+	max-width: 1200px;
+	padding-left: 10%;
+}
+
+.ajax-section {
+	margin: 70px 0 20px;
+	padding-top: 5%;
+}
+
+	.ajax-section .cities {
+		display: grid;
+		list-style: none;
+		grid-gap: 32px 20px;
+	}
+
+	.ajax-section .city {
+		position: relative;
+		padding: 30px 10%;
+		border-radius: 20px;
+		background: #ffda7d;
+		color: var(--text_med);
+	}
+
+		.ajax-section .city::after {
+			content: '';
+			width: 50%;
+			height: 50%;
+			position: relative;
+			opacity: 0.3;
+			border-radius: 20px;
+			background: var(--text_light);
+		}
+
+	.ajax-section figcaption {
+		margin-top: 10px;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.ajax-section .city-temp {
+		font-size: 2rem;
+		font-weight: bold;
+		color: var(--text_dark);
+	}
+
+	.ajax-section .city sup {
+		font-size: 0.5em;
+	}
+
+	.ajax-section .city-name sup {
+		border-radius: 30px;
+		color: var(--text_light);
+		background: var(--orange);
+	}
+
+	.ajax-section .city-icon {
+		margin-top: 10px;
+		width: 50%;
+		height: 50%;
+	}
+
+
+@media screen and (max-width: 1000px) {
+	body {
+		padding: 30px;
+	}
+
+	.ajax-section .cities {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.heading,
+	.ajax-section .city-temp {
+		font-size: 3rem;
+	}
+
+	.ajax-section {
+		margin-top: 20px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	body {
+		padding: 15px;
+	}
+
+	.ajax-section .cities {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
