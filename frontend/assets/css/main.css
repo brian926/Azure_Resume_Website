@@ -3425,19 +3425,20 @@ input, select, textarea {
 
 .weather-container {
 	width: 100%;
-	max-width: 1200px;
-	padding-left: 10%;
+	max-width: 100%;
+	padding-left: 5%;
 }
 
 .ajax-section {
 	margin: 70px 0 20px;
-	padding-top: 5%;
+	padding-top: 10%;
 }
 
 	.ajax-section .cities {
 		display: grid;
 		list-style: none;
 		grid-gap: 32px 20px;
+		grid-template-columns: minmax(200px, 200px) repeat(auto-fit, 200px);
 	}
 
 	.ajax-section .city {
