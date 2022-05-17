@@ -1,7 +1,7 @@
 ﻿/*SEARCH BY USING A CITY NAME (e.g. athens) OR A COMMA-SEPARATED CITY NAME ALONG WITH THE COUNTRY CODE (e.g. athens,gr)*/
 const list = document.querySelector(".ajax-section .cities");
-const apiKey = "d6b7a3447529c297169c609d74cda367";
-const api = "64730ae3269452"
+const apiKey = "";
+const api = ""
 
 document.addEventListener('DOMContentLoaded', e => {
     e.preventDefault();
