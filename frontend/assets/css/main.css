@@ -3318,7 +3318,7 @@ input, select, textarea {
 /* Weather Section */
 /*–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .weather-container {
-	width: 100%;
+	width: 50%;
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 15px;
@@ -3386,8 +3386,7 @@ input, select, textarea {
 		height: 100px;
 	}
 
-	/* MQ
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 @media screen and (max-width: 1000px) {
   body {
     padding: 30px;
@@ -3407,27 +3406,6 @@ input, select, textarea {
   .ajax-section {
     margin-top: 20px;
   }
-  
-  .top-banner form {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .top-banner form input,
-  .top-banner form button {
-    width: 100%;
-  }
-
-  .top-banner form button {
-    margin: 20px 0 0 0;
-  }
-  
-  .top-banner form .msg {
-    position: static;
-    max-width: none;
-    min-height: 0;
-    margin-top: 10px;
-  }
 
   .ajax-section .cities {
     grid-template-columns: repeat(2, 1fr);
@@ -3443,3 +3421,4 @@ input, select, textarea {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+

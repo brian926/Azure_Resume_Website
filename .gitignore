@@ -166,4 +166,5 @@ cython_debug/
 *.vsix
 
 # Visual Studio 2015/2017 cache/options directory
-.vs/*
+.vs\*
+config.yml
