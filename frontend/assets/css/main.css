@@ -3426,12 +3426,12 @@ input, select, textarea {
 .weather-container {
 	width: 100%;
 	max-width: 100%;
-	padding-left: 5%;
+	padding-left: 3%;
 }
 
 .ajax-section {
 	margin: 70px 0 20px;
-	padding-top: 10%;
+	padding-top: 5%;
 }
 
 	.ajax-section .cities {
@@ -3515,6 +3515,7 @@ input, select, textarea {
 	}
 
 	.ajax-section .cities {
-		grid-template-columns: repeat(1, 1fr);
+		/*grid-template-columns: repeat(1, 1fr);*/
+		grid-template-columns: minmax(40%, 40%) repeat(auto-fit, 40%);
 	}
 }

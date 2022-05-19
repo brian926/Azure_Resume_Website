@@ -25,7 +25,6 @@ namespace Company.Function
             string name = req.Query["name"];
             string lat = req.Query["lat"];
             string lon = req.Query["lon"];
-            string ip = req.Query["ip"];
 
             string requestBody = String.Empty;
             using (StreamReader streamReader =  new  StreamReader(req.Body))
@@ -36,31 +35,15 @@ namespace Company.Function
             name = name ?? data?.name;
             lat = lat ?? data?.lat;
             lon = lon ?? data?.lon;
-            ip = ip ?? data?.ip;
 
-            string keyUrl;
+            string keyUrl = null;
             var apiKey = "";
 
             if (!String.IsNullOrEmpty(lat) && !String.IsNullOrEmpty(lon)) {
                 keyUrl = $"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={apiKey}&units=imperial";
             }
             else if (!String.IsNullOrEmpty(name)){
-                keyUrl = $"https://api.openweathermap.org/data/2.5/weather?q={name}&appid={apiKey}&units=imperial";
-            }
-            else if (!String.IsNullOrEmpty(ip)){
-                var clientInfo = new HttpClient();
-                HttpResponseMessage responseInfo = clientInfo.GetAsync($"http://ipinfo.io/{ip}?token=").Result;
-                responseInfo.EnsureSuccessStatusCode();
-                string resultInfo = responseInfo.Content.ReadAsStringAsync().Result;
-                var dataIP = (JObject)JsonConvert.DeserializeObject(resultInfo);
-                string cord = dataIP["loc"].Value<string>();
-                string[] cords = cord.Split(',');
-                string latIP = cords[0];
-                string lonIP = cords[1];
-                keyUrl = $"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={apiKey}&units=imperial";
-            }
-            else{
-                keyUrl = null;
+                keyUrl = $"https://api.openweathermap.org/data/2.5/weather?q={name},us&appid={apiKey}&units=imperial";
             }
 
             var client = new HttpClient();
