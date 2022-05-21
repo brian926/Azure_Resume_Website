@@ -39,7 +39,7 @@ namespace Company.Function
 
             string keyUrl = null;
             Console.WriteLine("Grabbing API key");
-            var apiKey = _configuration["AzureWeatherConnectionString"];
+            var apiKey = Environment.GetEnvironmentVariable("AzureWeatherConnectionString", EnvironmentVariableTarget.Process);
 
             if (!String.IsNullOrEmpty(lat) && !String.IsNullOrEmpty(lon)) {
                 keyUrl = $"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={apiKey}&units=imperial";
