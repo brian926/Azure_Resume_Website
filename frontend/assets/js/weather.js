@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', e => {
     var cityList = [];
     var defaultCities = ["new%20york", "san%20francisco", "nashville", "boston", "seattle", "chicago"];
     defaultCities.forEach(element => {
-        cityList.push(`funUrl?name=${element}`);
+        cityList.push(`${funUrl}?name=${element}`);
     });
 
     for (const url of cityList) {

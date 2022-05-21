@@ -32,11 +32,13 @@ namespace Company.Function
                 requestBody = await streamReader.ReadToEndAsync();
             }
             dynamic data = JsonConvert.DeserializeObject(requestBody);
+            Console.WriteLine("Read query");
             name = name ?? data?.name;
             lat = lat ?? data?.lat;
             lon = lon ?? data?.lon;
 
             string keyUrl = null;
+            Console.WriteLine("Grabbing API key");
             var apiKey = _configuration["AzureWeatherConnectionString"];
 
             if (!String.IsNullOrEmpty(lat) && !String.IsNullOrEmpty(lon)) {
