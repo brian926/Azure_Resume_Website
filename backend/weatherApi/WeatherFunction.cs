@@ -37,7 +37,7 @@ namespace Company.Function
             lon = lon ?? data?.lon;
 
             string keyUrl = null;
-            var apiKey = Environment.GetEnvironmentVariable("AzureWeatherConnectionString");
+            var apiKey = _configuration["AzureWeatherConnectionString"];
 
             if (!String.IsNullOrEmpty(lat) && !String.IsNullOrEmpty(lon)) {
                 keyUrl = $"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={apiKey}&units=imperial";
