@@ -1,6 +1,5 @@
 ﻿const list = document.querySelector(".ajax-section .cities");
-const apiKey = "";
-const api = "";
+const funcUrl = 'https://getweatherfun.azurewebsites.net/api/WeatherFunction?code=BzhF4eZeShheJq8SMOKvzSu3L4l8z0HB0HdxLxu85o3JAzFuQAvXmw==';
 
 document.addEventListener('DOMContentLoaded', e => {
     e.preventDefault();
@@ -8,7 +7,7 @@ document.addEventListener('DOMContentLoaded', e => {
     var cityList = [];
     var defaultCities = ["new%20york", "san%20francisco", "nashville", "boston", "seattle", "chicago"];
     defaultCities.forEach(element => {
-        cityList.push(`http://localhost:7071/api/WeatherFunction?name=${element}`);
+        cityList.push(`funUrl?name=${element}`);
     });
 
     for (const url of cityList) {
