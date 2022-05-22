@@ -2851,12 +2851,12 @@ input, select, textarea {
 		display: grid;
 		list-style: none;
 		grid-gap: 32px 20px;
-		grid-template-columns: minmax(200px, 200px) repeat(auto-fit, 200px);
+		grid-template-columns: minmax(205px, 205px) repeat(auto-fit, 205px);
 	}
 
 	.ajax-section .city {
 		position: relative;
-		padding: 30px 10%;
+		padding: 30px 7%;
 		border-radius: 20px;
 		background: #ffda7d;
 		color: var(--text_med);
