@@ -42,18 +42,19 @@ namespace Company.Function
             var apiKey = Environment.GetEnvironmentVariable("AzureWeatherConnectionString", EnvironmentVariableTarget.Process);
 
             if (!String.IsNullOrEmpty(lat) && !String.IsNullOrEmpty(lon)) {
-                keyUrl = $"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={apiKey}&units=imperial";
+                keyUrl = $"?lat={lat}&lon={lon}&appid={apiKey}&units=imperial";
             }
             else if (!String.IsNullOrEmpty(name)){
-                keyUrl = $"https://api.openweathermap.org/data/2.5/weather?q={name},us&appid={apiKey}&units=imperial";
+                keyUrl = $"?q={name},us&appid={apiKey}&units=imperial";
             }
 
             var client = new HttpClient();
+            client.BaseAddress = new Uri("https://api.openweathermap.org/data/2.5/weather");
             HttpResponseMessage response = client.GetAsync(keyUrl).Result;
             response.EnsureSuccessStatusCode();
             string result = response.Content.ReadAsStringAsync().Result;
 
-            return !String.IsNullOrEmpty(keyUrl)
+            return name != null
                 ? (ActionResult)new OkObjectResult(result)
                 : new BadRequestObjectResult("Please pass a name on the query string or in the request body");
         }
