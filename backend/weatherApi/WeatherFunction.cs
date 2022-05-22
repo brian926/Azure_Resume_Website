@@ -54,7 +54,7 @@ namespace Company.Function
             response.EnsureSuccessStatusCode();
             string result = response.Content.ReadAsStringAsync().Result;
 
-            return name != null
+            return apiKey != null
                 ? (ActionResult)new OkObjectResult(result)
                 : new BadRequestObjectResult("Please pass a name on the query string or in the request body");
         }

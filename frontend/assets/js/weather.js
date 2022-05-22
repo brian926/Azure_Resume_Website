@@ -1,5 +1,5 @@
 ﻿const list = document.querySelector(".ajax-section .cities");
-const funcUrl = 'https://getweatherfun.azurewebsites.net/api/WeatherFunction?code=BzhF4eZeShheJq8SMOKvzSu3L4l8z0HB0HdxLxu85o3JAzFuQAvXmw==';
+const funcUrl = 'https://test2weatherfun.azurewebsites.net/api/WeatherFunction?';
 
 document.addEventListener('DOMContentLoaded', e => {
     e.preventDefault();
