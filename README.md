@@ -9,6 +9,8 @@
  That Azure Function API retrieves data from a Azure Cosmos DB and passes the count of visitors in the database.
  Lastly, Github Actions is used to create a CI/CD pipeline to deploy all changes to the front-end and/or back-end in Azure automatically.
 
+ ![Diagram](frontend/images/siteTopo.jpg)
+
  ## Resources
  The front-end is a static site being hosted with Azure Blob Storage. Here are some of the resources I used.
  - HTML and CSS templated used from [html5up](https://html5up.net) and modified to fix my own design
