@@ -23,6 +23,7 @@
 				<li><a href="#two">Experience</a></li>
 				<li><a href="#three">Education</a></li>
 				<li><a href="#four">Certifications</a></li>
+				<li><a href="#five">Development Process</a></li>
 			</ul>
 		</nav>
 		<footer>
@@ -166,9 +167,6 @@
 					</form>
 				</div>
 			</section>
-
-
-
 
 								Templates for addition creative sections provided by HTML5 UP
 
@@ -502,12 +500,23 @@
 
 
 		</div>
-				-->
-			<!-- Footer -->
-			<!-- Weather Section -->
-			<section class="ajax-section">
-				<div class="weather-container">
-					<ul class="cities"></ul>
+			-->
+			<section id="five">
+				<div class="container">
+					<section>
+						<h4>Development Process</h4>
+						<h5>Information on how this site is built</h5>
+						<p>This site is entirely hosted on Microsoft Azure! You can take a look at the code on my <a href="https://github.com/brian926/Azure_Resume_Website" target="_blank" rel="noopener noreferrer">Github.</a> The idea for this site came from the <a href="https://cloudresumechallenge.dev/docs/the-challenge/" target="_blank" rel="noopner noreferrer">Cloud Resume Challenge.</a> This hands-on project started with hosting a static web site on <a href="https://docs.microsoft.com/en-us/azure/databricks/data/data-sources/azure/azure-storage" target="_blank" rel="noopner noreferrer">Azure Blob Storage.</a> From there, I use <a href="https://docs.microsoft.com/en-us/azure/cdn/cdn-overview" target="_blank" rel="noopner noreferrer">Azure CDN endpoint</a> to map a custom domain and deliever the site to users. On the backend I then use <a href="https://docs.microsoft.com/en-us/azure/azure-functions/" target="_blank" rel="noopner noreferrer">Azure Functions</a> to make API calls to <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/introduction" target="_blank" rel="noopner noreferrer">Azure Cosmos DB.</a> With Azure Function I can use <a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook-trigger?tabs=in-process%2Cfunctionsv2&pivots=programming-language-csharp" target="_blank" rel="noopner noreferrer">HTTP Triggers</a> to retrieve and update a visitor count from my Azure Cosmos DB, where I can display it on the footer of this page. Lastly, by using <a href="https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions" target="_blank" rel="noopner noreferrer">GitHub Actions</a> I can create a CI/CD pipeline with Azure to deploy any changes I make to either the frontend or backend code.</p>
+						<p><span class="image fit"><img src="images/siteTopo.jpg" alt="" /></span>In addition, I can use Azure Functions to retireve API keys stored in Azure and make calls to a REST API. Below is an example using OpenWeather which displays live weather from Seattle, Chicago, Boston, and New York. This Azure Function also uses HTTP Trigger to utilizes the OpenWeather API key, retrieve live weather data, and pass it to the frontend to display on this page.</p>
+					</section>
+
+					<!-- Footer -->
+					<!-- Weather Section -->
+					<section class="ajax-section">
+						<div class="weather-container">
+							<ul class="cities"></ul>
+						</div>
+					</section>
 				</div>
 			</section>
 
@@ -520,17 +529,18 @@
 					</ul>
 				</div>
 			</section>
+
 		</div>
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/weather.js"></script>
-		<script src="assets/js/main.js"></script>
+				<!-- Scripts -->
+				<script src="assets/js/jquery.min.js"></script>
+				<script src="assets/js/jquery.scrollex.min.js"></script>
+				<script src="assets/js/jquery.scrolly.min.js"></script>
+				<script src="assets/js/browser.min.js"></script>
+				<script src="assets/js/breakpoints.min.js"></script>
+				<script src="assets/js/util.js"></script>
+				<script src="assets/js/weather.js"></script>
+				<script src="assets/js/main.js"></script>
 
 </body>
 </html>

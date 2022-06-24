@@ -2844,14 +2844,13 @@ input, select, textarea {
 
 .ajax-section {
 	margin: 70px 0 20px;
-	padding-top: 5%;
 }
 
 	.ajax-section .cities {
 		display: grid;
 		list-style: none;
 		grid-gap: 32px 20px;
-		grid-template-columns: minmax(205px, 205px) repeat(auto-fit, 205px);
+		grid-template-columns: minmax(190px, 190px) repeat(auto-fit, 190px);
 	}
 
 	.ajax-section .city {
